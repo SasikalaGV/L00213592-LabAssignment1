@@ -1,0 +1,30 @@
+
+Parameters:
+  MyBucketName:
+    Type: String
+    Description: 'Enter the Bucket Name'
+    Default: 'my-static-website-sasikala'
+
+
+Resources:
+  MyS3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: 
+        Ref: MyBucketName
+      WebsiteConfiguration:
+        IndexDocument: 'index.html'
+      
+  S3BucketPolicy:
+    Type: 'AWS::S3::BucketPolicy'
+    Properties:
+      Bucket: 
+        Ref: MyS3Bucket
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+            - Action: 's3:GetObject'
+              Effect: Allow
+              Resource: 
+                sub: '${MyS3Bucket.Arn}/*'
+              Principal: '*'
