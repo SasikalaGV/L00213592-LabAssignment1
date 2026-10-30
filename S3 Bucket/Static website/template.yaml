@@ -1,6 +1,15 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'S3 static website hosting'
 
+Parameters:
+    StudentName:
+      Type: String
+      Description: 'Student Name'
+      Default: 'Sasikala Varatharajan'
+    StudentNumber:
+      Type: String
+      Description: 'Student Number'
+      Default: 'L00213592'
 
 Resources:
   MyS3Bucket:
@@ -19,7 +28,7 @@ Resources:
   S3BucketPolicy:
     Type: 'AWS::S3::BucketPolicy'
     Properties:
-      Bucket: !Ref  MyS3Bucket
+      Bucket: !Ref MyS3Bucket
       PolicyDocument: 
           Version: '2012-10-17'
           Statement:
@@ -28,5 +37,12 @@ Resources:
             Action: 's3:GetObject'
             Resource: !Sub '${MyS3Bucket.Arn}/*'
             
+Outputs:
+  WebsiteBucketName:
+    Description: Name of the S3 bucket hosting the website.
+    Value: !Ref MyS3Bucket
 
+  WebsiteURL:
+    Description: S3 static website endpoint.
+    Value: !GetAtt MyS3Bucket.WebsiteURL
 
