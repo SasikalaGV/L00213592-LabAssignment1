@@ -6,10 +6,27 @@ Resources:
   MyS3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName: 'my-static-website-lab1'
+      BucketName: 'my-static-website-svlab'
       WebsiteConfiguration:
         IndexDocument: 'index.html'
       PublicAccessBlockConfiguration:
         RestrictPublicBuckets: false 
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+
+
+  S3BucketPolicy:
+    Type: 'AWS::S3::BucketPolicy'
+    Properties:
+      Bucket: !Ref  MyS3Bucket
+      PolicyDocument: 
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action: 's3:GetObject'
+            Resource: !Sub '${MyS3Bucket.Arn}/*'
+            
 
 
