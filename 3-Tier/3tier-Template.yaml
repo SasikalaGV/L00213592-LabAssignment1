@@ -157,7 +157,7 @@ Resources:
               return {
                   'statusCode': 200,
                   'headers': {'Content-Type': 'text/html'},
-                  'body': f'<h1>Web Tier ?</h1><h1>Application Tier ?</h1><h1>Database Tier {db_status}</h1>'
+                  'body': f'<h1>Web Tier is working (HTTP request reaches Application Tier) </h1><h1>Application Tier is working (Lamda executes successfully)</h1><h1>Database Tier (Lamda connected to MysQL port 3306)- {db_status}</h1>'
               }
 
   LambdaFunctionUrl:
