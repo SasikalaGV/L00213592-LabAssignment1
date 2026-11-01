@@ -19,17 +19,15 @@ Resources:
   MyS3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName: 
-        Ref: MyBucketName
+      BucketName: !Ref MyBucketName
       WebsiteConfiguration:
         IndexDocument: 'index.html'
-      
+    
 
   S3BucketPolicy:
     Type: 'AWS::S3::BucketPolicy'
     Properties:
-      Bucket: 
-        Ref: MyS3Bucket
+      Bucket: !Ref MyS3Bucket
       PolicyDocument:
         Version: 2012-10-17
         Statement:
@@ -38,12 +36,12 @@ Resources:
               Resource: 
                 sub: '${MyS3Bucket.Arn}/*'
               Principal: '*'
+
             
 Outputs:
   WebsiteBucketName:
     Description: Name of the S3 bucket hosting the website.
-    Value: 
-      Ref: MyS3Bucket
+    Value: !Ref MyS3Bucket
 
   WebsiteURL:
     Description: 'S3 static website endpoint'
