@@ -45,30 +45,30 @@ This project demonstrates Infrastructure as Code (IaC) using AWS CloudFormation 
   * Apply DevOps workflows and automation principles.
 
 ## Repository Structure
-D:.                                                            
-|   CODE_OF_CONDUCT.md                                         
-|   LICENSE                                                    
-|   README.md                                                  
-|   test                                                       
-|                                                              
-+---3-Tier                                                     
-|   |   3tier-Template.yaml              part -B - Template file for 3-Tier architecture                                                
-|   +---3Tier-Test2-Results              Template used in the initial stage and test results                  
-|   |                                           
-|   \---images                           Results from the part - B final template          
-|                                                              
-+---S3 Bucket                                                  
-|   \---Static website                   Part A - Files for the Static Website                      
-|       |   index.html                                         
-|       |   template.yaml                                      
-|       |                                                      
-|       +---Archive                      Folder with the test template file and results                      
-|       |       test.yaml                                      
-|       |                                                      
-|       \---images                       Results for the part -A                            
-|                                                              
-\---Website                              Index file for the website                      
-        index.html                                             
+    D:.                                                            
+    |   CODE_OF_CONDUCT.md                                         
+    |   LICENSE                                                    
+    |   README.md                                                  
+    |   test                                                       
+    |                                                              
+    +---3-Tier                                                     
+    |   |   3tier-Template.yaml              part -B - Template file for 3-Tier architecture                                                
+    |   +---3Tier-Test2-Results              Template used in the initial stage and test results                  
+    |   |                                           
+    |   \---images                           Results from the part - B final template          
+    |                                                              
+    +---S3 Bucket                                                  
+    |   \---Static website                   Part A - Files for the Static Website                      
+    |       |   index.html                                         
+    |       |   template.yaml                                      
+    |       |                                                      
+    |       +---Archive                      Folder with the test template file and results                      
+    |       |       test.yaml                                      
+    |       |                                                      
+    |       \---images                       Results for the part -A                            
+    |                                                              
+    \---Website                              Index file for the website                      
+            index.html                                             
 
 # Static S3 Website
 
