@@ -171,3 +171,4 @@ By using the Static website template, I used the prompt, "prepare a 3-Tier archi
 ![Web Tier](<3-Tier/images/Web Tier Result.png>)
 
 ![Result](<3-Tier/images/Final Result.png>)
+  * 
