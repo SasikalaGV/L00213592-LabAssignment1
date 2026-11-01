@@ -70,6 +70,7 @@ This project demonstrates Infrastructure as Code (IaC) using AWS CloudFormation 
     \---Website                              Index file for the website                      
             index.html                                             
 
+
 # Static S3 Website
 
 ## Tutorials used to learn the basics to run a static website using S3 bucket
@@ -138,6 +139,11 @@ Since the Lambda function URL is publicly accessible by public, it leads to unau
 * https://aws.amazon.com/blogs/architecture/building-a-three-tier-architecture-on-a-budget/
 * https://medium.com/@aaloktrivedi/building-a-3-tier-web-application-architecture-with-aws-eb5981613e30
 * https://aws.plainenglish.io/easy-guide-to-designing-a-3-tier-architecture-60d67c19d30a
+* https://aws.amazon.com/what-is/load-balancing/
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html
+* https://dev.mysql.com/doc/refman/9.7/en/connecting-disconnecting.html
+
+
 
 
 ## Use of LLM and tutorials
@@ -171,4 +177,4 @@ By using the Static website template, I used the prompt, "prepare a 3-Tier archi
 ![Web Tier](<3-Tier/images/Web Tier Result.png>)
 
 ![Result](<3-Tier/images/Final Result.png>)
-  * 
+
