@@ -148,3 +148,4 @@ For this project, I used ChatGPT to create the index.html file with the basic da
 ![Web Tier](<3-Tier/images/Web Tier Result.png>)
 
 ![Result](<3-Tier/images/Final Result.png>)
+  * 
